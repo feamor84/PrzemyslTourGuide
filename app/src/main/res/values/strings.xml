@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Przewodnik po Przemyślu</string>
+
+    <!-- Menu items -->
+    <string name="menu_tourist_attractions">Atrakcje</string>
+    <string name="menu_monuments">Zabytki</string>
+    <string name="menu_museums">Muzea</string>
+    <string name="menu_food_and_drink">Jedzenie i napoje</string>
+</resources>

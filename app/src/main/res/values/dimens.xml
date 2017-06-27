@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Drawer menu values -->
+    <dimen name="itemHeight">48dp</dimen>
+    <dimen name="iconContainerWidth">72dp</dimen>
+    <dimen name="defaultItemSpace">16dp</dimen>
+    <dimen name="itemFontSize">14sp</dimen>
+</resources>
