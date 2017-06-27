@@ -1,6 +1,9 @@
 package pl.bartekpawlowski.przemysltourguide;
 
-public class Place {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Place implements Parcelable {
 
     /*
     * All of these members are IDs of resources from R
@@ -21,6 +24,38 @@ public class Place {
         mText = text;
         mImage = image;
     }
+
+    // Get Object Place when comes from Parcelable
+    public Place(Parcel in) {
+        mTitle = in.readInt();
+        mText = in.readInt();
+        mImage = in.readInt();
+    }
+
+    // Define kind of object
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    // Write Object Place content to Parcel
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(mTitle);
+        dest.writeInt(mText);
+        dest.writeInt(mImage);
+    }
+
+    // Create single Object Place or array of objects
+    public static final Parcelable.Creator<Place> CREATOR = new Parcelable.Creator<Place>() {
+        public Place createFromParcel(Parcel in) {
+            return new Place(in);
+        }
+
+        public Place[] newArray(int size) {
+            return new Place[size];
+        }
+    };
 
     public int getTitle() {
         return mTitle;
