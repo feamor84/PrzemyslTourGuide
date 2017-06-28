@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/singleItemContainer">
+
+    <LinearLayout style="@style/singleItemContainer.linearLayout">
+
+        <ImageView
+            android:id="@+id/itemPlaceImage"
+            style="@style/singleItemImage" />
+
+        <TextView
+            android:id="@+id/itemPlaceHeading"
+            style="@style/singleItemHeading" />
+
+        <TextView
+            android:id="@+id/itemPlaceText"
+            style="@style/singleItemText" />
+
+    </LinearLayout>
+
+</ScrollView>

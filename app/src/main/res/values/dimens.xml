@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_margin_half">8dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
     <!-- Drawer menu values -->
     <dimen name="itemHeight">48dp</dimen>
     <dimen name="iconContainerWidth">72dp</dimen>
     <dimen name="defaultItemSpace">16dp</dimen>
     <dimen name="itemFontSize">14sp</dimen>
+    <!--Cards dimens-->
+    <dimen name="card_corner_radius">1dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="card_divider_height">1dp</dimen>
+    <dimen name="vertical_card_heading">16sp</dimen>
+    <dimen name="vertical_card_image_view_height">200dp</dimen>
+    <dimen name="horizontal_card_height">100dp</dimen>
+    <dimen name="horizontal_card_image_view_height">100dp</dimen>
+    <dimen name="horizontal_card_image_view_width">100dp</dimen>
+    <dimen name="horizontal_card_heading">14sp</dimen>
+    <!-- Single item -->
+    <dimen name="single_heading_text_size">16sp</dimen>
+    <dimen name="single_text_text_size">14sp</dimen>
 </resources>

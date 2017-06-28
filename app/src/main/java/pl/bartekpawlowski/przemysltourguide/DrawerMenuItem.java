@@ -1,16 +1,16 @@
 package pl.bartekpawlowski.przemysltourguide;
 
-public class MenuItem {
+public class DrawerMenuItem {
 
+    private static final int NO_IMAGE_PROVIDED = -1;
     private int mTitleID;
     private int mIconID;
-    private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * @param titleID ID of string resource
      */
 
-    public MenuItem(int titleID) {
+    public DrawerMenuItem(int titleID) {
         mTitleID = titleID;
         mIconID = NO_IMAGE_PROVIDED;
     }
@@ -20,7 +20,7 @@ public class MenuItem {
      * @param iconID  - ID of drawable (icon) resource
      */
 
-    public MenuItem(int titleID, int iconID) {
+    public DrawerMenuItem(int titleID, int iconID) {
         mTitleID = titleID;
         mIconID = iconID;
     }

@@ -5,13 +5,23 @@ import android.os.Parcelable;
 
 public class Place implements Parcelable {
 
+    // Create single Object Place or array of objects
+    public static final Parcelable.Creator<Place> CREATOR = new Parcelable.Creator<Place>() {
+        public Place createFromParcel(Parcel in) {
+            return new Place(in);
+        }
+
+        public Place[] newArray(int size) {
+            return new Place[size];
+        }
+    };
+    private static final int NO_IMAGE_PROVIDED = -1;
     /*
     * All of these members are IDs of resources from R
     */
     private int mTitle;
     private int mText;
     private int mImage;
-    private static final int NO_IMAGE_PROVIDED = -1;
 
     public Place(int title, int text) {
         mTitle = title;
@@ -46,17 +56,6 @@ public class Place implements Parcelable {
         dest.writeInt(mImage);
     }
 
-    // Create single Object Place or array of objects
-    public static final Parcelable.Creator<Place> CREATOR = new Parcelable.Creator<Place>() {
-        public Place createFromParcel(Parcel in) {
-            return new Place(in);
-        }
-
-        public Place[] newArray(int size) {
-            return new Place[size];
-        }
-    };
-
     public int getTitle() {
         return mTitle;
     }
@@ -72,6 +71,4 @@ public class Place implements Parcelable {
     public boolean hasImage() {
         return mImage != NO_IMAGE_PROVIDED;
     }
-
-
 }
