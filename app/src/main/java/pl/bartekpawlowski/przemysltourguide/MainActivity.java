@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CharSequence mDrawerTitle;
     private CharSequence mTitle;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -33,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("AAA");
+                getSupportActionBar().setTitle(mTitle);
             }
 
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                getSupportActionBar().setTitle("BBB");
+                getSupportActionBar().setTitle(mTitle);
             }
         };
 
@@ -110,15 +109,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         listToPopulate = attractions;
+                        mTitle = getResources().getString(R.string.menu_tourist_attractions);
                         break;
                     case 1:
                         listToPopulate = monuments;
+                        mTitle = getResources().getString(R.string.menu_monuments);
                         break;
                     case 2:
                         listToPopulate = museums;
+                        mTitle = getResources().getString(R.string.menu_museums);
                         break;
                     case 3:
                         listToPopulate = foodAndDrink;
+                        mTitle = getResources().getString(R.string.menu_food_and_drink);
                         break;
                 }
 
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.contentContainer, listFragment).commit();
 
                 mDrawerLayout.closeDrawer(GravityCompat.START);
+                getSupportActionBar().setTitle(mTitle);
             }
         });
     }

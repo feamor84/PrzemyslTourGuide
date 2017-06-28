@@ -19,6 +19,6 @@
     <dimen name="horizontal_card_image_view_width">100dp</dimen>
     <dimen name="horizontal_card_heading">14sp</dimen>
     <!-- Single item -->
-    <dimen name="single_heading_text_size">16sp</dimen>
+    <dimen name="single_heading_text_size">18sp</dimen>
     <dimen name="single_text_text_size">14sp</dimen>
 </resources>

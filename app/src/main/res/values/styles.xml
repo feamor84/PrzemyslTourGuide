@@ -115,6 +115,7 @@
 
     <style name="singleItemContainer.linearLayout">
         <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/default_padding</item>
     </style>
 
     <style name="singleItemImage">
