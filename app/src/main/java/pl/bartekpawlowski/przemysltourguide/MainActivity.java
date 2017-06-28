@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CharSequence mTitle = getResources().getString(R.string.app_name);
+    private CharSequence mTitle;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
 
@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mTitle = getResources().getString(R.string.app_name);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerContainer);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {

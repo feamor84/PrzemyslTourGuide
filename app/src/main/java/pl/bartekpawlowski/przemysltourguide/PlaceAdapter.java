@@ -27,12 +27,6 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         mContext = context;
     }
 
-    public PlaceAdapter(Context context, ArrayList<Place> places, int orientation) {
-        super(context, 0, places);
-        mContext = context;
-        mOrientation = orientation;
-    }
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
