@@ -1,6 +1,5 @@
 package pl.bartekpawlowski.przemysltourguide;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.ListFragment;
 import android.content.res.Configuration;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CharSequence mTitle;
+    private CharSequence mTitle = getResources().getString(R.string.app_name);
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
 
