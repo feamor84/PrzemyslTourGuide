@@ -1,5 +1,6 @@
 package pl.bartekpawlowski.przemysltourguide;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.ListFragment;
 import android.content.res.Configuration;
@@ -45,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+        Place przemysl = new Place(R.string.przemysl_heading, R.string.przemysl_text, R.drawable.przemysl_logo);
+
+        PlaceItemFragment placeItemFragment = new PlaceItemFragment();
+        Bundle args = new Bundle();
+        args.putParcelable(PlaceItemFragment.PLACE_ITEM, przemysl);
+        placeItemFragment.setArguments(args);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contentContainer, placeItemFragment).commit();
 
         /*
         * Create ArrayList<MenuItem> which contains menu items, resources gets from drawable and string
